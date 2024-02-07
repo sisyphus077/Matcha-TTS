@@ -119,8 +119,6 @@ def main():
     args = validate_args(args)
 
     if args.gpu:
-        providers = ["GPUExecutionProvider"]
-    elif args.cuda:
         providers = ["CUDAExecutionProvider"]
     else:
         providers = ["CPUExecutionProvider"]
