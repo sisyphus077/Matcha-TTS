@@ -120,6 +120,8 @@ def main():
 
     if args.gpu:
         providers = ["GPUExecutionProvider"]
+    elif args.cuda:
+        providers = ["CUDAExecutionProvider"]
     else:
         providers = ["CPUExecutionProvider"]
     model = ort.InferenceSession(args.model, providers=providers)
